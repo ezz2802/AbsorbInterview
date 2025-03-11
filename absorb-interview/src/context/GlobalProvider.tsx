@@ -1,4 +1,4 @@
-import { useState, ReactNode } from 'react';
+import React, { useState, ReactNode } from 'react';
 import { GlobalContext } from './GlobalContext';
 
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {

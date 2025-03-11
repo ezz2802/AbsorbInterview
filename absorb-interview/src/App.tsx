@@ -6,6 +6,7 @@ import './App.css'
 import ErrorBoundary from './context/ErrorBoundary'
 import { GlobalProvider } from './context/GlobalProvider'
 import Home from './pages/Home'
+import React from 'react';
 
 function App() {
   // const [count, setCount] = useState(0)
