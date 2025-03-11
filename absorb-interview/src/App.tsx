@@ -7,6 +7,7 @@ import ErrorBoundary from './context/ErrorBoundary'
 import { GlobalProvider } from './context/GlobalProvider'
 import Home from './pages/Home'
 import React from 'react';
+import NotFound from './pages/NotFound'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -39,6 +40,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
         </ErrorBoundary>
