@@ -1,7 +1,11 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
+import ErrorBoundary from './context/ErrorBoundary'
+import { GlobalProvider } from './context/GlobalProvider'
+import Home from './pages/Home'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -29,11 +33,15 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
 
-      <div>
-        <p>
-          Hello, World!
-        </p>
-      </div>
+      <GlobalProvider>
+        <ErrorBoundary>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
+        </ErrorBoundary>
+      </GlobalProvider>
     </>
   )
 }
