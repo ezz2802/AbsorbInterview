@@ -1,20 +1,10 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
+import React from "react";
+import styles from "./home.module.css";
 
 function Home() {
-    const globalContext = useContext(GlobalContext);
-
-    if (!globalContext) {
-        throw new Error('GlobalContext must be used within a GlobalProvider');
-    }
-
-    // const { count, setCount } = globalContext;
-
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Hello, World!</h1>
-            {/* <p>Count: {count}</p> */}
-            {/* <button onClick={() => setCount(count + 1)}>Increment</button> */}
         </div>
     );
 }
